@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapbox GL JS map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    const bounds = [  
+    [39.86685627742156,
+    21.385373631698727], // Southwest coordinates  
+    [39.943517029263035,
+    21.43374889436477] // Northeast coordinates  
+];  
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpLS1hIiwiYSI6ImNseWZzeGNnaTAzN3MybXMydjVuOG9uZDEifQ.3JDTA1Il7_jeCm905kBDlw';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/ali--a/clyl35rcv012v01nw5p4oa8zu',
+        center: [39.890776, 21.411105], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        zoom: 15, // starting zoom
+        pitch: 39,
+        maxBounds: bounds
+    });
+</script>
+
+</body>
+</html>
