@@ -23,12 +23,17 @@ body { margin: 0; padding: 0; }
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpLS1hIiwiYSI6ImNtMzh1aHVjbDB5aDAybXM1a2lrdXp2Y2IifQ.kj0DCCtlWmbwv4c8byiEIw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        style: 'mapbox://styles/ali--a/clyl35rcv012v01nw5p4oa8zu',
+        style: 'mapbox://styles/ali--a/cm38omd2101i801o0ghoj5s57',
         center: [39.890776, 21.411105], // starting position [lng, lat]. Note that lat must be set between -90 and 90
         zoom: 15, // starting zoom
         pitch: 39,
         maxBounds: bounds
     });
+    mapboxgl.setRTLTextPlugin(
+    'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.3.0/mapbox-gl-rtl-text.js',
+    null,
+    true // Lazy load the plugin
+);
 </script>
 
 </body>
